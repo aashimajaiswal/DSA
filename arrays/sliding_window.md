@@ -57,3 +57,45 @@ while right < array.length:
 - **Time Optimization:** From `O(n × k)` to `O(n)`
 - **Space Efficient:** Constant extra space
 - **Versatile:** Works for both fixed and variable window problems
+
+## Leetcode 3. Longest Substring Without Repeating Characters (Medium)
+- Link: https://leetcode.com/problems/longest-substring-without-repeating-characters/description/
+- Mistakes
+    - left pointer to be after previous occurance of duplicate just seen
+    - if duplicate seen make sure its previous occurance is in the sliding window
+- Code
+    ```
+    class Solution(object):
+    def lengthOfLongestSubstring(self, s):
+        """
+        :type s: str
+        :rtype: int
+        """
+
+        # Logic
+        # 2 pointers left and right
+        # right moves by 1 everytime
+        # left only moves when a character occurs again
+        # when right sees a duplicate
+        # checks be looking at seen dict (has element, location seen)
+        # checks if seen before is in the current sliding window , like for "abba"
+        # because if its repeated but is not in the window, its not repeated in the substring
+
+        left = 0
+        max_len = 0
+        seen = {}
+
+        for right in range(len(s)):
+
+            # check if its seen
+            # if its seen check if its in the sliding window
+            if s[right] in seen and seen[s[right]] >= left:
+                left = seen[s[right]] + 1
+
+            # register seen in dict
+            seen[s[right]] = right
+
+            max_len = max(max_len, right - left + 1)
+
+        return max_len        
+    ```
