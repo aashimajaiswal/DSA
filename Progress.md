@@ -2,7 +2,7 @@
 
 Keeping a note of daily progress to track and be consistent.
 
-Stats: 1E 3M 1H (5/3686)
+Stats: 2E 5M 1H (7/3686)
 
 ### 15/09/2025
 - Done: Array general theory, Sliding window theory
@@ -22,3 +22,7 @@ Stats: 1E 3M 1H (5/3686)
 
 ### 20/09/2025
 - Done: LC76, LC88
+- Next: Redo LC88, 3 problems
+
+### 21/09/2025
+- Done: LC88, LC75, LC647
