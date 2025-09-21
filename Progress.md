@@ -18,3 +18,7 @@ Stats: 1E 3M 1H (5/3686)
 
 ### 19/09/2025
 - Done: LC209, LC76
+- Next: Redo LC76, 2 problems
+
+### 20/09/2025
+- Done: LC76, LC88
